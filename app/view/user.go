@@ -11,11 +11,11 @@ func( r *UserRenderer) Register() string {
 }
 
 func (r Component)LoginForm(props map[string]string, childrens string) string {
-return       react.Run("form", map[string]string{`class` :`space-y-6`,`action` :`#`,`method` :`POST`}, []string{`
+return       react.Run("form", map[string]string{`action` :`#`,`method` :`POST`,`class` :`space-y-6`}, []string{`
     `, react.Run("div", map[string]string{}, []string{`
-      `, react.Run("label", map[string]string{`for` :`email`,`class` :`block text-sm font-medium leading-6 text-gray-900`}, []string{`Email address`}), `
+      `, react.Run("label", map[string]string{`class` :`block text-sm font-medium leading-6 text-gray-900`,`for` :`email`}, []string{`Email address`}), `
       `, react.Run("div", map[string]string{`class` :`mt-2`}, []string{`
-        `, react.Run("input", map[string]string{`id` :`email`,`name` :`email`,`type` :`email`,`autocomplete` :`email`,`required class` :`block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6`}, []string{}), `
+        `, react.Run("input", map[string]string{`autocomplete` :`email`,`required class` :`block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6`,`id` :`email`,`name` :`email`,`type` :`email`}, []string{}), `
       `}), `
     `}), `
 
@@ -23,7 +23,7 @@ return       react.Run("form", map[string]string{`class` :`space-y-6`,`action` :
       `, react.Run("div", map[string]string{`class` :`flex items-center justify-between`}, []string{`
         `, react.Run("label", map[string]string{`for` :`password`,`class` :`block text-sm font-medium leading-6 text-gray-900`}, []string{`Password`}), `
         `, react.Run("div", map[string]string{`class` :`text-sm`}, []string{`
-          `, react.Run("a", map[string]string{`href` :`#`,`class` :`font-semibold text-indigo-600 hover:text-indigo-500`}, []string{`Forgot password?`}), `
+          `, react.Run("a", map[string]string{`class` :`font-semibold text-indigo-600 hover:text-indigo-500`,`href` :`#`}, []string{`Forgot password?`}), `
         `}), `
       `}), `
       `, react.Run("div", map[string]string{`class` :`mt-2`}, []string{`
@@ -42,7 +42,7 @@ func( r *UserRenderer ) Login() string {
 
 `, react.Run("div", map[string]string{`class` :`flex min-h-full flex-col justify-center px-6 py-12 lg:px-8`}, []string{`
     `, react.Run("div", map[string]string{`class` :`sm:mx-auto sm:w-full sm:max-w-sm`}, []string{`
-      `, react.Run("img", map[string]string{`src` :`https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600`,`alt` :`Your Company`,`class` :`mx-auto h-10 w-auto`}, []string{}), `
+      `, react.Run("img", map[string]string{`class` :`mx-auto h-10 w-auto`,`src` :`https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600`,`alt` :`Your Company`}, []string{}), `
       `, react.Run("h2", map[string]string{`class` :`mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900`}, []string{`Sign in to your account`}), `
     `}), `
   

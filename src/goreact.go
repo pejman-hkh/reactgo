@@ -54,16 +54,16 @@ func getType(myvar interface{}) string {
 }
 
 func (gr *GoReact) HandleRoute(ctx *gin.Context, obj any, method string) {
-	cname := getType(obj)
+	//	cname := getType(obj)
 	res := ""
-	if gr.checkCache(cname, method) {
-		res = gr.getCache(cname, method)
+	// if gr.checkCache(cname, method) {
+	// 	res = gr.getCache(cname, method)
 
-	} else {
-		rf := Invoke(obj, method, ctx)
-		res = rf[0].Interface().(string)
-		gr.cache(cname, method, res)
-	}
+	// } else {
+	rf := Invoke(obj, method, ctx)
+	res = rf[0].Interface().(string)
+	//gr.cache(cname, method, res)
+	//}
 
 	ctx.Data(http.StatusOK, "text/html; charset=utf-8", []byte(res))
 }
