@@ -1,0 +1,64 @@
+package view
+
+import (
+	"github.com/pejman-hkh/gdp/gox"
+)
+
+type Component struct {}
+var react gox.Gox = gox.Gox{Component{}}
+
+func (r Component) Link(props map[string]string, childrens string) string {
+	return <a href={{props["to"]}}>{childrens}</a>
+}
+
+func (r Component) SideNav(props map[string]string, childrens string) string {
+	return <nav>{childrens}</nav>
+}
+
+func (r Component) Content(props map[string]string, childrens string) string {
+	return <main>{childrens}</main>
+}
+
+func (r Component) Header(props map[string]string, childrens string) string {
+	return <f>
+	<header>
+	<nav>
+		<ul>
+			<li>
+			<a href="/">Home</a>
+			</li>
+		</ul>
+	</nav>
+	{childrens}
+	</header>
+	<h1>{props["title"]}</h1>
+	</f>
+}
+
+func (r Component) Footer(props map[string]string, childrens string) string {
+	return <footer>
+	<Link to="https://www.github.com/pejman-hkh/gdp">https://www.github.com/pejman-hkh/gdp</Link> 
+	{childrens}
+	</footer>
+}
+
+
+func (r Component) Layout(props map[string]string, childrens string) string {
+	return <f>
+	<html>
+	<head>
+	</head>
+	<Header title="test">test 
+		<Link to="/about">About</Link>
+		<Link to="/contact">About</Link>
+	</Header>
+	<SideNav>
+		<li><a href="/contact">Contact</a></li>
+	</SideNav>
+	<Content>
+		{childrens}
+	</Content>
+	<Footer title="test">test</Footer>
+	</html>
+	</f>
+}

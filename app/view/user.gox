@@ -1,0 +1,14 @@
+package view
+
+type UserRenderer struct {
+
+}
+
+func( r *UserRenderer ) Login() string {
+    return <Layout>
+        <form>
+        <label>Username :</label>
+        <input type="text" />
+        </form>		
+	</Layout>
+}
