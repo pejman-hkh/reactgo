@@ -19,8 +19,16 @@ func main() {
 		gr.HandleRoute(ctx, index, "Index")
 	})
 
+	r.GET("/home", func(ctx *gin.Context) {
+		gr.HandleRoute(ctx, index, "Index")
+	})
+
 	r.GET("/login", func(ctx *gin.Context) {
 		gr.HandleRoute(ctx, user, "Login")
+	})
+
+	r.GET("/register", func(ctx *gin.Context) {
+		gr.HandleRoute(ctx, user, "Register")
 	})
 
 	r.POST("/login", user.LoginPost)
